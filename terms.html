@@ -6,25 +6,22 @@
 
         <!-- HTML Meta Tags -->
         <title>Terms of Service | is-a.stupid.cat</title>
-        <meta name="description" content="By using our service, you agree to the following Terms of Service." />
+        <meta name="description" content="By using is-a.stupid.cat, you agree to the following Terms of Service." />
 
         <!-- Google / Search Engine Tags -->
         <meta itemprop="name" content="Terms of Service | is-a.stupid.cat" />
-        <meta itemprop="description" content="By using our service, you agree to the following Terms of Service." />
+        <meta itemprop="description" content="By using is-a.stupid.cat, you agree to the following Terms of Service." />
 
         <!-- Facebook Meta Tags -->
         <meta property="og:url" content="https://is-a.stupid.cat/terms" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Terms of Service | is-a.stupid.cat" />
-        <meta property="og:description" content="By using our service, you agree to the following Terms of Service." />
+        <meta property="og:description" content="By using is-a.stupid.cat, you agree to the following Terms of Service." />
 
         <!-- Twitter Meta Tags -->
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Terms of Service | is-a.stupid.cat" />
-        <meta name="twitter:description" content="By using our service, you agree to the following Terms of Service." />
-
-        <!-- Files -->
-        <link rel="preload" href="https://raw.githubusercontent.com/is-a-dev/register/refs/heads/main/TERMS_OF_SERVICE.md" as="fetch" crossorigin="anonymous">
+        <meta name="twitter:description" content="By using is-a.stupid.cat, you agree to the following Terms of Service." />
 
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -34,38 +31,94 @@
         <link rel="stylesheet" href="styles/secondary.css" />
         <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/Roboto/font.css" rel="prefetch" />
         <link rel="stylesheet" href="https://cdn.hrsn.net/is-a-dev/website/fonts/UbuntuMono/font.css" rel="prefetch" />
-
-        <!-- Scripts -->
-        <script src="scripts/marked.min.js" rel="prefetch"></script>
     </head>
 
     <body>
-        <div class="markdown-body" id="terms-of-service"><p>Loading...</p></div>
+        <div class="markdown-body" id="terms-of-service">
+            <h1>Terms of Service</h1>
+            <p><em>Last updated: 12 August 2026</em></p>
 
-        <script>
-            const markdownUrl = "https://raw.githubusercontent.com/is-a-dev/register/refs/heads/main/TERMS_OF_SERVICE.md";
+            <p>
+                <strong>is-a.stupid.cat</strong> provides free <code>*.is-a.stupid.cat</code> subdomains.
+                By requesting, holding, or using a subdomain, you agree to these terms. If you do not agree,
+                do not register a subdomain.
+            </p>
 
-            const container = document.getElementById("terms-of-service");
+            <h2>1. Eligibility</h2>
+            <ul>
+                <li>You need a GitHub account to register a subdomain.</li>
+                <li>Subdomains are handed out for free, on a first-come, first-served basis.</li>
+                <li>You must be able to receive and respond to messages on the GitHub account used to register.</li>
+            </ul>
 
-            // Fetch the Markdown file
-            fetch(markdownUrl)
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Error fetching the file: ${response.statusText}`);
-                    }
-                    return response.text();
-                })
-                .then(markdown => {
-                    // Convert Markdown to HTML using Marked.js
-                    const htmlContent = marked.parse(markdown);
+            <h2>2. What you may not use a subdomain for</h2>
+            <p>Subdomains must <strong>not</strong> be used for any of the following:</p>
+            <ul>
+                <li>
+                    <strong>Commercial or money-making organisations.</strong> No company sites, business
+                    landing pages, storefronts, paid services, monetised link farms, ad-revenue sites,
+                    donation-farming, or anything whose primary purpose is generating revenue.
+                    Personal projects, portfolios, hobby sites, and non-commercial community projects are fine.
+                </li>
+                <li>
+                    <strong>Cryptocurrency, NFTs, and Web3 speculation.</strong> No crypto exchanges, wallets,
+                    token or coin promotion, NFT mints, marketplaces or galleries, mining or mining pools,
+                    airdrops, "to the moon" projects, or anything else selling or shilling digital assets.
+                </li>
+                <li>
+                    <strong>Pornography and adult content.</strong> No porn sites, adult video or image hosting,
+                    escort or sex-work advertising, camming sites, or NSFW content aggregators. This includes
+                    proxying or embedding such content from elsewhere.
+                </li>
+                <li>
+                    <strong>Illegal content.</strong> Anything unlawful in the United Kingdom, including
+                    child sexual abuse material, piracy and copyright-infringing distribution, stolen data,
+                    or the sale of controlled goods.
+                </li>
+                <li>
+                    <strong>Abuse and harm.</strong> Malware, phishing, scams, command-and-control
+                    infrastructure, spam, harassment or doxxing campaigns, or hate speech targeting people for
+                    who they are.
+                </li>
+            </ul>
+            <p>
+                Sexual content involving minors, or any sexualisation of minors, results in an immediate
+                permanent ban and, where appropriate, a report to the relevant authorities.
+            </p>
 
-                    // Insert the HTML into the container
-                    container.innerHTML = htmlContent;
-                })
-                .catch(err => {
-                    console.error(err);
-                    container.innerHTML = `<h3>An error occurred</h3><pre><code>${err}</code></pre>`;
-                });
-        </script>
+            <h2>3. Content on your subdomain</h2>
+            <p>
+                You are solely responsible for whatever your subdomain points at, including content served by
+                third parties you use. We do not host your content and we do not review it before it goes live.
+            </p>
+
+            <h2>4. Enforcement</h2>
+            <p>
+                We may suspend or delete any subdomain, at any time, for any breach of these terms — usually
+                without warning where the breach is serious. Where a fix is reasonable, we may instead ask you
+                to correct the issue within a set period. Repeated or deliberate breaches may result in a
+                permanent ban from the service.
+            </p>
+            <p>
+                To report a subdomain, open an issue on
+                <a href="https://github.com/is-a-stupid-cat/register" target="_blank">is-a-stupid-cat/register</a>
+                or contact us on <a href="https://discord.com/invite/aVzSvXCy5v" target="_blank">Discord</a>.
+            </p>
+
+            <h2>5. No warranty</h2>
+            <p>
+                The service is provided "as is", free of charge, with no guarantee of uptime, availability, or
+                data retention. We are not liable for any loss or damage resulting from use of, or inability to
+                use, the service. We may change or shut down the service at any time.
+            </p>
+
+            <h2>6. Changes to these terms</h2>
+            <p>
+                These terms may be updated at any time. Continuing to use your subdomain after a change means
+                you accept the updated terms.
+            </p>
+
+            <p><a href="/">&larr; Back to homepage</a></p>
+        </div>
     </body>
 </html>
