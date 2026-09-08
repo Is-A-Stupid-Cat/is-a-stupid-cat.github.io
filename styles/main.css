@@ -1,15 +1,24 @@
 html,
 body {
-    --header-bg: linear-gradient(90deg, #1a1331, var(--hover-bg));
-    --accent: #7041ff;
-    --body-fg: #d1c4ff;
-    --hover-bg: #4e3aa3;
-    --hover-accent: #9b7dff;
-    --styled-border: conic-gradient(#0f0c19 0 0) padding-box,linear-gradient(to right,#1a1331 20%,#4e3aa3 80%) border-box;
-   
+    /* Trans flag palette */
+    --trans-blue: #5bcefa;
+    --trans-pink: #f5a9b8;
+    --trans-white: #ffffff;
+    --flag-v: linear-gradient(180deg, var(--trans-blue) 0 20%, var(--trans-pink) 20% 40%, var(--trans-white) 40% 60%, var(--trans-pink) 60% 80%, var(--trans-blue) 80% 100%);
+    --flag-h: linear-gradient(90deg, var(--trans-blue) 0 20%, var(--trans-pink) 20% 40%, var(--trans-white) 40% 60%, var(--trans-pink) 60% 80%, var(--trans-blue) 80% 100%);
+
+    --page-bg: #0b1620;
+    --header-bg: var(--flag-v);
+    --accent: #5bcefa;
+    --accent-alt: #f5a9b8;
+    --body-fg: #e6f3fb;
+    --hover-bg: #1b3a4b;
+    --hover-accent: #f5a9b8;
+    --styled-border: conic-gradient(#0b1620 0 0) padding-box, var(--flag-h) border-box;
+
     margin: 0;
     padding: 0;
-    background-color: #0f0c19;
+    background-color: #0b1620;
     color: var(--body-fg);
     font-family: "Roboto Regular", sans-serif;
     line-height: 1.6;
@@ -38,11 +47,11 @@ a:hover {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0f0c19;
+    background: #0b1620;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--accent);
+    background: var(--flag-v);
     border-radius: 6px;
 }
 
@@ -54,7 +63,7 @@ main {
     padding: 2em;
     margin: 1em auto;
     max-width: 900px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(91, 206, 250, 0.06);
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
@@ -62,7 +71,7 @@ main {
 /* Banner */
 main .banner {
     font-size: 2.5rem;
-    color: var(--body-fg);
+    color: #0b1620;
     text-align: center;
     background: var(--header-bg);
     padding: 4px;
@@ -82,15 +91,15 @@ main .banner img {
 /* Paragraphs */
 main p {
     padding-left: 15px;
-    border-left: 3px solid var(--accent);
-    border-radius: 5px;
+    border-left: 3px solid transparent;
+    border-image: var(--flag-v) 1;
     margin-bottom: 1em;
 }
 
 /* Headings */
 h1 {
     font-size: 2.5rem;
-    color: var(--body-fg);
+    color: #0b1620;
     text-align: center;
     background: var(--header-bg);
     padding: 15px;
@@ -103,7 +112,8 @@ h2 {
     margin-top: 2rem;
     font-size: 1.5rem;
     color: var(--accent);
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 3px solid transparent;
+    border-image: var(--flag-h) 1;
     padding-bottom: 5px;
 }
 
@@ -116,7 +126,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: var(--accent); /* Ensures the color remains the same */
+    color: var(--accent-alt);
     background-color: transparent; /* No background change */
 }
 
@@ -211,12 +221,12 @@ input::placeholder {
 
 /* Selection */
 ::-moz-selection {
-    color: #fff;
-    background: var(--accent);
+    color: #0b1620;
+    background: var(--trans-pink);
 }
 ::selection {
-    color: #fff;
-    background: var(--accent);
+    color: #0b1620;
+    background: var(--trans-pink);
 }
 
 /* List of all subdomains link (all.is-a.dev) */
@@ -233,10 +243,10 @@ input::placeholder {
             translate: 10% 10%;
             -webkit-translate: 10% 10%;
             text-decoration: underline;
-            text-decoration-color: #5f39d396;
+            text-decoration-color: #f5a9b896;
             :hover {
-                filter: drop-shadow(0px 0px 5px #5f39d396);
-                -webkit-filter: drop-shadow(0px 0px 5px #5f39d396);
+                filter: drop-shadow(0px 0px 5px #5bcefa96);
+                -webkit-filter: drop-shadow(0px 0px 5px #5bcefa96);
                 padding: 0px;
             }
         }

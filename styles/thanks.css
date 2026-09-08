@@ -8,7 +8,8 @@
 }
 
 .supporter {
-    background: #4e3aa366;
+    background: rgba(91, 206, 250, 0.12);
+    border-left: 4px solid var(--trans-pink, #f5a9b8);
     border-radius: 12px;
     padding: 1rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
@@ -37,5 +38,5 @@
 .role {
     margin-top: 0.5rem;
     font-size: 0.9rem;
-    color: #999;
+    color: #a9c9da;
 }
